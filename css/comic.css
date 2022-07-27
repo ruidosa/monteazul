@@ -1,0 +1,650 @@
+/*Triptych*/
+body {
+  font-family: "Anton", sans-serif;
+  margin: 0px;
+}
+
+
+#triptych-title {
+  font-family: "Helvetica", sans-serif;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+  top: 5%;
+	font-weight: 300;
+	font-size: 40px;
+}
+
+.master-div {
+  margin-top: 32px;
+  width: 1500px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.first-panel{
+  position:absolute;
+  height: 800px;
+  weidth: 500px;
+  left:.25%;
+  top:20%;
+}
+
+.second-panel{
+  position:absolute;
+  background-image: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(254,255,211,1) 58%, rgba(250,255,66,1) 100%);
+  height: 800px;
+  width: 500px;
+  left:33%;
+  z-index: -1;
+
+}
+
+.third-panel{
+  position:absolute;
+  height: 470px;
+  width: 470px;
+  left:68%;
+  top:20%;
+}
+
+.menu.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 0vw;
+  margin-top: 10px;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.menu.icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.menu.icon:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/*Felipe*/
+/*different idea, may still use for Felipe...
+.felipe-head {
+  position: absolute;
+  background-color: black;
+  height: 250px;
+  width: 250px;
+  top: 20%;
+  left: 10%;
+  box-shadow: 0px -100px 80px rgb(252 15 2);
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-torso {
+  position: absolute;
+  background-color: black;
+  height: 200px;
+  width: 400px;
+  top: 60%;
+  left: 3%;
+  box-shadow: 0px -100px 80px rgb(27 2 252);
+}
+
+.felipe-headband-1 {
+  position: absolute;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  top: 15%;
+  left: 10%;
+}
+
+.felipe-headband-2 {
+  position: absolute;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  top: 15%;
+  left: 18%;
+}
+
+*/
+
+.felipe-area {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  top: 25%;
+  left:5%;
+}
+
+.felipe-square {
+  position: relative;
+  background-color: black;
+  height: 150px;
+  width: 150px;
+}
+
+.effect8
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+  content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+  right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+.felipe-square:nth-child(1) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-square:nth-child(2) {
+  background: rgb(195,34,34);
+  background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(0,0,0,1) 56%);
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-square:nth-child(3) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-square:nth-child(4) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-square:nth-child(5) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-square:nth-child(6) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-square:nth-child(7) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
+}
+
+.felipe-square:nth-child(8) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(10deg);
+    box-shadow: inset 10px -20px 80px rgb(27 2 252);
+}
+
+.felipe-square:nth-child(9) {
+  transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(10deg);
+}
+
+/*Mria Lionza*/
+
+.petal {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: inset 10px -20px 80px rgb(142 0 114);
+  top: 40%;
+  left: 20%;
+}
+
+.petal:nth-child(1) {
+  box-shadow: inset 10px -20px 80px rgb(142 0 114);
+  top: 40%;
+  left: 23%;
+}
+
+.petal:nth-child(2) {
+  box-shadow: inset 10px -20px 80px rgb(142 0 114);
+  top: 35%;
+  left: 28%;
+}
+
+.petal:nth-child(3) {
+  box-shadow: inset 10px -20px 80px rgb(142 0 114);
+  top: 38%;
+  left: 33%;
+}
+
+.petal:nth-child(4) {
+  box-shadow: inset 10px -20px 80px rgb(142 0 114);
+  top: 37%;
+  left: 30%;
+}
+
+.petal:nth-child(5) {
+  box-shadow: inset 10px -20px 80px rgb(142 0 114);
+  top: 36%;
+  left: 25%;
+}
+
+
+/*guaicaipuro*/
+
+.egg {
+      position: absolute;
+      width: 126px;
+      height: 180px;
+      background: rgb(255,0,0);
+      background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 37%);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      z-index: 1;
+      top: 25%;
+      left: 30%;
+    }
+.guaicaipuro-background {
+  position: absolute;
+  background-image: linear-gradient(0deg, #ffffff 50%, #000000 50%);
+  background-size: 20px 20px;
+  width: 280px;
+  height: 230px;
+  top: 30%;
+  left: 20%;
+  transform: skew(20deg);
+  z-index: -2;
+}
+.guaicaipuro-area-V {
+  display: grid;
+  gap: 17px;
+  grid-template-columns: repeat(6, 1fr);
+  opacity: 1;
+  z-index:-1;
+}
+
+.guaicaipuro-line-V {
+  position: relative;
+  background-color: #0e008e;
+  opacity: 1;
+  height: 470px;
+  width: 58px;
+}
+
+.guaicaipuro-line-V:nth-child(1) {
+  height: 470px;
+}
+
+.guaicaipuro-line-V:nth-child(2) {
+  height: 470px;
+}
+
+.guaicaipuro-line-V:nth-child(3) {
+  height: 470px;
+}
+
+.guaicaipuro-line-V:nth-child(4) {
+  height: 470px;
+}
+
+.guaicaipuro-line-V:nth-child(5) {
+  height: 470px;
+}
+
+.guaicaipuro-line-V:nth-child(6) {
+  height: 470px;
+}
+
+
+/*
+
+.guaicaipuro-area-H {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+
+}
+
+.guaicaipuro-line-H {
+  position: relative;
+  background-color: red;
+  height: 18px;
+  width: 300px;
+}
+
+.guaicaipuro-line-H:nth-child(1) {
+
+}
+
+.guaicaipuro-line-H:nth-child(2) {
+
+}
+
+.guaicaipuro-line-H:nth-child(3) {
+
+}
+
+.guaicaipuro-line-H:nth-child(4) {
+
+}
+
+.guaicaipuro-line-H:nth-child(5) {
+
+}
+
+.guaicaipuro-line-H:nth-child(6) {
+
+}
+*/
+
+#felipe-head {
+  animation: felipe-head-animation 20s linear 0s infinite alternate;
+}
+
+#felipe-square1 {
+  animation: felipe-square-animation .1s linear 0s infinite alternate;
+}
+
+#felipe-square2 {
+  animation: felipe-square-animation 1.3s ease-in .97s infinite alternate;
+}
+
+#felipe-square3 {
+  animation: felipe-square-animation .35s ease-out .8s infinite alternate;
+}
+
+#felipe-square4 {
+  animation: felipe-square-animation .2s ease-in-out .3s infinite alternate;
+}
+
+#felipe-square6 {
+  animation: felipe-square-animation .5s linear 1s infinite alternate;
+}
+
+#felipe-square7 {
+  animation: felipe-square-animation .45s ease-out 0s infinite alternate;
+}
+
+#felipe-square8 {
+  animation: felipe-square-animation .05s linear .4s infinite alternate;
+}
+
+#felipe-square9 {
+  animation: felipe-square-animation .6s ease .2s infinite alternate;
+}
+
+#petal1 {
+  animation: petal-animation 3s ease-in-out 0s infinite alternate;
+}
+
+#petal2 {
+  animation: petal-animation 5s ease-in 0s infinite alternate;
+}
+
+#petal3 {
+  animation: petal-animation 7s ease-out 0s infinite alternate;
+}
+
+#petal4 {
+  animation: petal-animation 8.3s linear 0s infinite alternate;
+}
+
+#petal5 {
+  animation: petal-animation 4.7s ease-in-out 0s infinite alternate;
+}
+
+#line1 {
+  animation: line-shadow-anim 20s ease-in 0s infinite alternate;
+}
+
+#line2 {
+  animation: line-shadow-anim 20s ease-in 1s infinite alternate;
+}
+
+#line3 {
+  animation: line-shadow-anim 20s ease-in 2s infinite alternate;
+}
+
+#line4 {
+  animation: line-shadow-anim 20s ease-in 3s infinite alternate;
+}
+
+#line5 {
+  animation: line-shadow-anim 20s ease-in 4s infinite alternate;
+}
+
+#line6 {
+  animation: line-shadow-anim 20s ease-in 5s infinite alternate;
+}
+
+#line7 {
+  animation: line-shadow-anim 20s ease-in 6s infinite alternate;
+}
+
+#horizontal-lines {
+  animation: H-lines 7s linear 0s infinite alternate;
+}
+#egg-animation {
+  animation: egg-core 7s ease-in-out 0s infinite alternate;
+}
+#eggz-position {
+  animation: eggz 3s linear 0s infinite alternate;
+}
+
+@keyframes felipe-head-animation {
+  0% {
+    transform:
+      perspective(1000px)
+      rotateX(4deg)
+      rotateY(-16deg)
+      rotateZ(4deg)
+      skew(1deg, 10deg);
+  }
+
+  25% {
+    transform:
+      perspective(500px)
+      rotateX(5deg)
+      rotateY(-17deg)
+      rotateZ(5deg)
+      skew(-1deg, -8deg);
+  }
+
+  50% {
+    transform:
+      perspective(600px)
+      rotateX(3deg)
+      rotateY(-17.5deg)
+      rotateZ(3deg)
+      skew(-.8deg, -4deg);
+  }
+
+  75% {
+    transform:
+      perspective(700px)
+      rotateX(5deg)
+      rotateY(-16.8deg)
+      rotateZ(4.1deg)
+      skew(0deg, -1deg);
+  }
+
+  100% {
+    transform:
+      perspective(1050px)
+      rotateX(-3deg)
+      rotateY(26deg)
+      rotateZ(1deg)
+      skew(-3deg, 2deg);
+  }
+}
+
+@keyframes felipe-square-animation {
+  0% {
+    transform:
+      perspective(1000px)
+      rotateX(1deg)
+      rotateY(-16deg)
+      rotateZ(4deg)
+      skew(1deg, 6deg);
+  }
+
+  50% {
+    transform:
+      perspective(1000px)
+      rotateX(1.5deg)
+      rotateY(-17deg)
+      rotateZ(4.5deg)
+      skew(-1deg, -.5deg);
+  }
+
+  100% {
+    transform:
+      perspective(1050px)
+      rotateX(-.7deg)
+      rotateY(-15deg)
+      rotateZ(3.8deg)
+      skew(-2.3deg, 2deg);
+  }
+}
+
+@keyframes petal-animation {
+  0% {
+    box-shadow: inset 10px -20px 80px rgb(142 0 114);
+    transform: rotate(360deg);
+  }
+  100% {
+    box-shadow: inset 10px -80px 80px rgb(142 0 114);
+  }
+}
+
+@keyframes egg-core {
+  0% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 37%);
+  }
+  13% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 47%);
+  }
+  38% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 20%);
+  }
+  59% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 21%);
+  }
+  77% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 33%);
+  }
+  94% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 28%);
+  }
+  100% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 67%);
+  }
+}
+
+@keyframes line-shadow-anim {
+  0% {
+    background-color: #0e008e;
+  }
+
+  100% {
+    background-color: #0aecfc;
+  }
+}
+
+@keyframes H-lines {
+  0% {transform: skew(20deg);}
+  100% {transform: skew(-20deg);}
+
+}
